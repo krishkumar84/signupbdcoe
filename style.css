@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+  }
+  
+  @keyframes rotate {
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    background-color: #000000;
+    background-image: url("bbblurry.svg");
+    background-repeat: no-repeat;
+    background-size: 200vh;
+    font-family: "Euclid Circular A";
+    color: #868b94;
+    animation: rotate 5s infinite alternate linear;
+  }
+  
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .control {
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #f9f9f9;
+    margin: 8px 0;
+    font-family: inherit;
+    text-align: left;
+    font-size: 16px;
+    transition: 0.4s;
+  }
+  
+  .login-card {
+    width: 410px;
+    padding: 25px 25px 20px;
+    border-radius: 1.25rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(26px);
+    text-align: center;
+  }
+  .credentials{
+    margin-top: 2rem;
+    color: rgb(75 85 99);
+  }
+  .credentials2{
+    font-weight: 500;
+    color: rgb(79 70 229);
+    transition-property: all;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     transition-duration: 150ms;
+     text-decoration: none;
+  }
+  .credentials2:hover {
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .credentials3{
+    font-size: 0.875rem; 
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: rgb(75, 68, 204);
+    text-decoration: none;
+  }
+  .credentials3:hover{
+    color: rgb(79 70 229);
+    
+  }
+  .forgot{
+    text-align: end;
+  }
+  .credentials4{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #292828;
+    border-style: solid;
+    border-radius: 0.375rem;
+    border-color: rgb(243, 245, 248);
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(147, 149, 152);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+  .credentials4:hover{
+    background-color: rgb(243 244 246);
+    text-emphasis-color: black;
+    
+  }
+  .credentials4-img{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 1rem;
+  }
+  .credentials4-svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: rgb(244 63 94);
+  }
+  
+  .login-card > h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #f9f9f9;
+  }
+  
+  .login-card img {
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .login-card > h3 {
+    color: #837f90;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .login-form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+  }
+  
+  .login-form input.control::placeholder {
+    color: #868b94;
+  }
+  
+  .login-form > button.control {
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #f9f9f9;
+    color: #000000;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+  }
+  
+  .username {
+    position: relative;
+  }
+  
+  @keyframes spin {
+    100% {
+      rotate: 1turn;
+    }
+  }
+  
+  .spinner {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    translate: 0 -50%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3px solid #ccc9e1;
+    border-top-color: #8f44fd;
+    opacity: 0;
+    animation: spin 1s infinite linear;
+  }
+  
+  .spinner.visible {
+    opacity: 1;
+  }
+  
+  .indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #bars {
+    margin: 8px 0;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #bars div {
+    height: 6px;
+    border-radius: 3px;
+    transition: 0.4s;
+    width: 0%;
+  }
+  
+  #bars.weak div {
+    background: #bc2b38;
+    width: 33.33%;
+  }
+  
+  #bars.medium div {
+    background: #d36f30;
+    width: 66.66%;
+  }
+  
+  #bars.strong div {
+    background: #1eb965;
+    width: 100%;
+  }
+  
+  .strength {
+    text-align: left;
+    height: 30px;
+    text-transform: capitalize;
+  }
