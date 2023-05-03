@@ -51,20 +51,21 @@
   }
   
   .login-card {
-    width: 410px;
+    width: 420px;
     padding: 25px 25px 20px;
     border-radius: 1.25rem;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(26px);
     text-align: center;
+    margin-top: 20px;
   }
   .credentials{
     margin-top: 2rem;
-    color: rgb(75 85 99);
+    color: rgb(203, 208, 215);
   }
   .credentials2{
     font-weight: 500;
-    color: rgb(79 70 229);
+    color: rgb(118, 112, 231);
     transition-property: all;
      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
      transition-duration: 150ms;
@@ -78,7 +79,7 @@
     font-size: 0.875rem; 
     line-height: 1.25rem;
     font-weight: 500;
-    color: rgb(75, 68, 204);
+    color: rgb(120, 115, 211);
     text-decoration: none;
   }
   .credentials3:hover{
@@ -96,18 +97,21 @@
     justify-content: center;
     background-color: #292828;
     border-style: solid;
-    border-radius: 0.375rem;
+    border-radius: 0.385rem;
     border-color: rgb(243, 245, 248);
     padding: 1rem;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 1rem;
-    color: rgb(147, 149, 152);
+    color: rgb(198, 200, 203);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
   }
   .credentials4:hover{
     background-color: rgb(243 244 246);
-    text-emphasis-color: black;
+    color: rgb(38, 39, 39);
+    transition: ease-in-out;
+    transition-duration: 200ms;
     
   }
   .credentials4-img{
@@ -121,6 +125,10 @@
     height: 1.5rem;
     width: 1.5rem;
     color: rgb(244 63 94);
+  }
+  .form-group{
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   
   .login-card > h2 {
@@ -242,4 +250,26 @@
     text-align: left;
     height: 30px;
     text-transform: capitalize;
+  }
+
+  /* @media (width : 430px) {
+    .login-card {
+      width: 500px;
+    }
+  } */
+  /* @media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  } */
+  @media screen and (max-width: 600px){
+    
+    .login-card {
+      width: 80%;
+      
+      margin-bottom: 400px;
+    }
+    body{
+      animation: none;
+    }
   }
