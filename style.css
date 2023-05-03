@@ -271,5 +271,6 @@
     }
     body{
       animation: none;
+      background-color: #121212;
     }
   }
