@@ -255,12 +255,12 @@
   @media screen and (max-width: 600px){
     
     .login-card {
-      width: 80%;
-      
-      margin-bottom: 400px;
+      width: 85%;
+      margin-top: 50px;
+      margin-bottom: 360px;
     }
     body{
       animation: none;
-      background-color: #121212;
+      background-color: #1b0828;
     }
   }
